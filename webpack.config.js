@@ -76,5 +76,4 @@ Encore
 
 config = Encore.getWebpackConfig()
 
-console.log(config)
 module.exports = config
