@@ -6,9 +6,10 @@ $Secondary-color: #FF79DA;
 $alternate-color: #99E2D0;
 $background-light: #f5f5f5;
 $background-localisation: darken($background-light,8%);
+$bg-footer: #3e3e3e;
 
 %font-title {
-	font-family: 'Shrikhand', 'cursive';
+	font-family: 'Shrikhand';
 }
 
 %font-body {
@@ -86,6 +87,7 @@ h2 {
 .fonctionnement {
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 30px;
 
 	.btn-menu {
 		@extend %font-body;
@@ -96,7 +98,7 @@ h2 {
 	button {
 		display: flex;
 		align-items: center;
-		margin: 20px;
+		margin: 10px 20px;
 		border-radius: 20px;
 		padding: 1rem;
 		span {
@@ -167,19 +169,30 @@ h2 {
 }
 
 footer {
-	background-color: black;
+	background-color: $bg-footer;
 	color: white;
+	padding-bottom: 20px;
 
 	h2 {
 		@extend %font-title;
-		font-size: 30px;
+		font-size: 1.2em;
+		font-weight: 400;
+		margin: 0;
+		padding: 20px;
 	}
 
 	.menu {
-		padding-left: 10px;
+		display: flex;
+		padding: 0 0 0.25em 20px;
+		font-size: 1em;
+		font-weight: 400;
 		i {
 			width: 40px;
+	
 		}
-		display: flex;
+		h3 {
+			font-size: 1em;
+			font-weight: 400;
+		}
 	}
 }
