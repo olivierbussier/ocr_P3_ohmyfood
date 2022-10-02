@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 $primary-color: #9356DC;
-$Secondary-color: #FF79DA;
+$secondary-color: #FF79DA;
 $alternate-color: #99E2D0;
 $background-light: #f5f5f5;
 $background-localisation: darken($background-light,8%);
@@ -69,13 +69,18 @@ header {
 }
 
 .btn {
-	background: linear-gradient($Secondary-color, $primary-color);
+	background: linear-gradient($secondary-color, $primary-color);
 	font-size: 0.9rem;
 	border:none;
 	color: white;
 	border-radius: 30px;
 	margin: auto;
 	padding: 15px 20px;
+	&:hover {
+		background: linear-gradient(darken($secondary-color, 10%), darken($primary-color, 10%));
+		transform: scale(1.05);
+		transition-duration: 0.25s;
+	}
 }
 
 h2 {
@@ -166,6 +171,38 @@ h2 {
 		font-weight: 700;
 		
 	}
+
+	.card-body {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		.none {
+			display: none;
+		}
+		div {
+			width: 85%;
+		}
+		i {
+			position: absolute;
+			top: calc(50% - 1rem);
+			right: 1rem;
+			text-align: center;
+			color: $primary-color;
+			opacity: 1;
+			transition-duration: 0.5s;
+		}
+		.fa-solid {
+			color:transparent;
+			opacity: 0;
+			background-image: linear-gradient($primary-color, $secondary-color);
+			background-clip: text;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
 }
 
 footer {
@@ -194,5 +231,9 @@ footer {
 			font-size: 1em;
 			font-weight: 400;
 		}
+		a {
+			text-decoration: none;
+			color: white;
+		}	
 	}
 }
