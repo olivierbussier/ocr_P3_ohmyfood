@@ -1,38 +1,55 @@
 .fonctionnement {
-	display: flex;
-	flex-direction: column;
 	margin-bottom: 30px;
-    @media (min-width: 768px) {
+    counter-reset: counter-etape;
+    padding: 0 1em;
+    font-size: 1em;
+    ol{
+        $button-height: 1rem;
+        $circle-proportion: 1.3;
+        
+        display: flex;
         flex-direction: row;
+        gap: 2rem;
+        // Règle spécifique pour afficher les items en ligne si desktop
+        @media (max-width: 860px) {
+            flex-direction: column;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;           // Les <li> occupent tout l'espace
+            gap: 0.5rem;
+            position: relative;     // Positionnement relatif pour le pos absolu en dessous 
+            padding: $button-height $button-height $button-height calc(2 * $button-height);
+            margin-left: $button-height;
+            border: none;
+            list-style: none; 
+            font-size: $button-height;      // Pas de numérotation par défaut
+            border-radius: $button-height;
+            background-color: $background-light;
+            box-shadow: 2px 2px 5px grey;
+            @include animation-duration;
+            &:hover {
+                @include button-animation;
+            }
+            &::before {
+                font-size: $circle-proportion * 0.75rem;
+                display: flex;                      // Flex pour aligner le chiffre facilement
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                position: absolute;   
+                //top: 1rem;              // Pour pouvoir décaler l'élément a gauche
+                left: -1 * calc($circle-proportion / 2) * $button-height;                  // Décalage à gauche
+                width: $circle-proportion * $button-height;
+                height: $circle-proportion * $button-height;
+                counter-increment: counter-etape;   // Incrément du compteur d'étape
+                content: counter(counter-etape);    // Affichage du compteur d'étape
+                border-radius: 50%;
+                background-color: $primary-color;
+                color:white;
+            }
+        }
     }
-    
-	.btn-menu {
-		@extend %font-body;
-		font-weight: 500;
-		border: none;
-	}
-
-	button {
-		display: flex;
-		align-items: center;
-		margin: 10px 20px;
-		border-radius: 20px;
-		padding: 1rem;
-		span {
-			width: 30px;
-			
-			
-			background-color: $primary-color;
-			padding: 4px 8px;
-			border-radius: 50%;
-			float: left;
-			color: white;
-			margin-left: -30px;
-		}
-		i {
-			width: 4rem;
-			color: gray;
-		}
-	}
 }
 

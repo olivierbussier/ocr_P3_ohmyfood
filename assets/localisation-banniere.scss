@@ -26,18 +26,16 @@
 
 .btn {
     $size: 1rem;
-	background: linear-gradient($secondary-color, $primary-color);
 	font-size: $size;
 	border:none;
 	color: white;
 	border-radius: $size * 2;
     box-shadow: 2px 1px 5px grey;
 	padding: $size $size * 2;
-    background-image: linear-gradient($secondary-color,$primary-color);
-    transition: all 250ms;
-&:hover {
-        transform: scale(1.02);
-        opacity: 0.9;
-	}
+    @include box-gradient;
+    @include animation-duration;
+    &:hover {
+        @include button-animation;
+    }
 }
 

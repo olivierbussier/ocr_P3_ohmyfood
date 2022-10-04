@@ -2,7 +2,7 @@
 header {
 	box-shadow: 0 3px 3px darken($background-light,20%);
 	margin-bottom: 3px;
-	@extend %font-logo;
+	@include font-logo;
 	h1 {
 		font-size: 2em;
 		text-align: center;

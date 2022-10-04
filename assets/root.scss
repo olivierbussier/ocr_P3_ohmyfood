@@ -15,14 +15,27 @@ $bg-footer: #3e3e3e;
 }
 
 // Mixins pour les polices de caracteres
-%font-logo {
+@mixin font-logo {
 	font-family: 'Shrikhand', 'cursive';
 }
 
-%font-body {
+@mixin font-body {
 	font-family: 'roboto' , 'sans-serif';
 }
 
+// Mixin pour le dégradé utilisé à plusieurs endroits
+@mixin box-gradient {
+    background-image: linear-gradient($secondary-color,$primary-color);
+}
+
+@mixin animation-duration {
+	transition-duration: 250ms;
+}
+
+@mixin button-animation {
+	transform: scale(1.02);
+	opacity: 0.9;
+}
 // Reset des propriétés 
 *,
 ::before,
@@ -36,14 +49,14 @@ $bg-footer: #3e3e3e;
 body {
 	margin: 0;
 	padding: 0;
-	@extend %font-body;
+	@include font-body;
 }
 
 // Définition du container qui va wrapper tous les éléments
 .container{ 
 	max-width: 1200px;
-	margin: auto;		// Centrage
-	padding: 0 0;
+	margin: 0;		// Centrage
+	padding: 0;
 	background-color: white;
 	color: black;
 }
