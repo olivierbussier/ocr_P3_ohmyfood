@@ -1,0 +1,14 @@
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-shadow: 0 3px 3px $background-light;
+	margin-bottom: 3px;
+	@extend %font-logo;
+	h1 {
+
+		font-size: 2em;
+		text-align: center;
+	}
+}
+

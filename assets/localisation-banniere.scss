@@ -1,0 +1,35 @@
+.localisation {
+	display: flex;
+	gap: 10px;
+	padding: 10px 0;
+	background-color: $background-localisation;
+	font-size: 1.2em;
+	justify-content: center;
+}
+
+.banniere {
+	display: flex;
+	flex-direction: column;
+	background-color: $background-light;
+	text-align: center;
+	padding: 40px 20px;
+	p {
+		font-size: small;
+		padding: 10px;
+	}
+}
+
+.btn {
+	background: linear-gradient($secondary-color, $primary-color);
+	font-size: 0.9rem;
+	border:none;
+	color: white;
+	border-radius: 30px;
+	margin: auto;
+	padding: 15px 20px;
+	&:hover {
+		background: linear-gradient(darken($secondary-color, 10%), darken($primary-color, 10%));
+		transform: scale(1.05);
+		transition-duration: 0.25s;
+	}
+}
