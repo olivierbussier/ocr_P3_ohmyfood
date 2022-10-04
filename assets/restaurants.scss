@@ -4,12 +4,8 @@
 }
 
 .card {
-	display: block;
 	position: relative;
-	flex-direction: column;
-	border: 1px solid black;
-	margin-bottom: 20px;
-	//margin: 0 20px 20px 20px;
+    margin: 20px;
 	border-radius: 20px;
 	border:none;
 	background-color: #fff;
@@ -28,21 +24,17 @@
 	p {
 		padding: 0 0 1rem 1rem;
 	}
-	.top-right {
-		display: inline-block;
+	&.new::after {
+        content: "Nouveau";
 		position: absolute;
 		right: 20px;
 		top: 20px;
-		width: auto;
-		align-items: center;
-		justify-content: center;
 		padding: 6px 10px;
-		text-align: right;
 		background-color:$alternate-color;
 		color:darken($alternate-color, 50%);
 		font-size: .9em;
 		font-weight: 700;
-		
+		border-radius: 3px;
 	}
 
 	.card-body {
