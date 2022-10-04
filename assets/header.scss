@@ -1,14 +1,13 @@
+// Section du titre de la page
 header {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	box-shadow: 0 3px 3px $background-light;
+	box-shadow: 0 3px 3px darken($background-light,20%);
 	margin-bottom: 3px;
 	@extend %font-logo;
 	h1 {
-
 		font-size: 2em;
 		text-align: center;
+		margin: 00 3px 0;
+		padding: 1em;
 	}
 }
 
