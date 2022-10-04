@@ -1,72 +1,78 @@
 .restaurants {
-	background-color: $background-light;
+    background-color: $background-light;
 	padding: 20px 0;
+    .menus {
+        display: grid;
+        grid-template-columns: 1fr;
+        @media  (min-width: $bp-desktop) {
+            grid-template-columns: 1fr 1fr;
+        }
+        .card {
+            min-width: 340px;
+            position: relative;
+            margin: 10px 20px;
+            border-radius: 20px;
+            border:none;
+            background-color: #fff;
+            box-shadow: 0 0 10px lightgray;
+            img {
+                width: 100%;
+                border-radius: 20px 20px 0 0;
+                height: 200px;
+                object-fit: cover;
+            }
+            h2 {
+                padding: 1rem 0 0.25rem 1rem;
+                margin: 0;
+                font-size: 1.25rem;
+            }
+            p {
+                padding: 0 0 1rem 1rem;
+            }
+            &.new::after {
+                content: "Nouveau";
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                padding: 6px 10px;
+                background-color:$alternate-color;
+                color:darken($alternate-color, 50%);
+                font-size: .9em;
+                font-weight: 700;
+                border-radius: 3px;
+            }
+
+            .card-body {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .none {
+                    display: none;
+                }
+                div {
+                    width: 85%;
+                }
+                i {
+                    position: absolute;
+                    top: calc(50% - 1rem);
+                    right: 1rem;
+                    text-align: center;
+                    color: $primary-color;
+                    opacity: 1;
+                    transition-duration: 0.5s;
+                }
+                .fa-solid {
+                    color:transparent;
+                    opacity: 0;
+                    background-image: linear-gradient($primary-color, $secondary-color);
+                    background-clip: text;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
 }
-
-.card {
-	position: relative;
-    margin: 20px;
-	border-radius: 20px;
-	border:none;
-	background-color: #fff;
-	box-shadow: 0 0 10px lightgray;
-	img {
-		width: 100%;
-		border-radius: 20px 20px 0 0;
-		height: 200px;
-		object-fit: cover;
-	}
-	h2 {
-		padding: 1rem 0 0.25rem 1rem;
-		margin: 0;
-		font-size: 1.25rem;
-	}
-	p {
-		padding: 0 0 1rem 1rem;
-	}
-	&.new::after {
-        content: "Nouveau";
-		position: absolute;
-		right: 20px;
-		top: 20px;
-		padding: 6px 10px;
-		background-color:$alternate-color;
-		color:darken($alternate-color, 50%);
-		font-size: .9em;
-		font-weight: 700;
-		border-radius: 3px;
-	}
-
-	.card-body {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-
-		.none {
-			display: none;
-		}
-		div {
-			width: 85%;
-		}
-		i {
-			position: absolute;
-			top: calc(50% - 1rem);
-			right: 1rem;
-			text-align: center;
-			color: $primary-color;
-			opacity: 1;
-			transition-duration: 0.5s;
-		}
-		.fa-solid {
-			color:transparent;
-			opacity: 0;
-			background-image: linear-gradient($primary-color, $secondary-color);
-			background-clip: text;
-			&:hover {
-				opacity: 1;
-			}
-		}
-	}
-}
-

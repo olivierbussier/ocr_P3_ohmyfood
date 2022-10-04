@@ -9,6 +9,8 @@ $background-light: #f5f5f5;
 $background-localisation: darken($background-light,8%);
 $bg-footer: #3e3e3e;
 
+$bp-desktop: 860px;
+
 // Classes de couleurs
 .fg-primary {
 	color: $primary-color!important;
