@@ -18,7 +18,37 @@
         border-radius: 40px;
         background-color: #f6f6f6;
         .menu-title {
-           @include font-logo
+            position: relative;
+            display: flex;
+            @include font-logo;
+            h2 {
+                width: calc(100% - $width-hearth);
+            }
+            &::before {
+                /*
+                 * Mixin heart (coeur contour uniquement) avec parametres
+                 *  - base opacity: 1  (visible)
+                 *  - font-weight: 400 (juste le contour)
+                 */
+                @include heart(1, 400);
+            }
+            &::after {
+                /*
+                 * Mixin heart (coeur plein) avec parametres
+                 *  - base opacity: 0  (invisible)
+                 *  - font-weight: 900 (coeur plein)
+                 */
+                @include heart(0, 900);
+                transition-duration: 0.5s;
+            }
+            &:hover::after {
+                /*
+                 * Sur le hover on fait apparaitre le coeur plein
+                 *  - opacity: 1 (visible)
+                 */
+                 opacity: 1;
+            }
+
         }
     }
 }

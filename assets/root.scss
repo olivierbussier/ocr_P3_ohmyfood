@@ -15,6 +15,7 @@ $background-localisation: darken($background-light,8%);
 $bg-footer: #3e3e3e;
 
 $bp-desktop: 860px;
+$width-hearth: 15%;
 
 // Classes de couleurs
 .fg-primary {
@@ -48,8 +49,8 @@ $bp-desktop: 860px;
 	font-weight: $font-weight;
 	content: "\f004";
 	position: absolute;
-	top: calc(50% - 1rem);
-	right: 1rem;
+	top: calc(100% / 2 - 0.5rem);
+	right: calc($width-hearth / 2 - 0.5rem);
 	text-align: center;
 	color: $primary-color;
 	opacity: $base-opacity;
@@ -81,6 +82,6 @@ body {
 
 h2 {
 	font-size: 1.5rem;
-	padding: 3rem 0 1rem 2rem;
+	padding: 2rem 0 1rem 2rem;
 }
 

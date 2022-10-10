@@ -6,7 +6,7 @@
  
  .restaurants {
     background-color: $background-light;
-	padding: 20px 0;
+    margin-bottom: 1em;
     .menus {
         a{
             text-decoration: inherit;
@@ -57,7 +57,7 @@
                 flex-direction: row;
                 align-items: center;
                 div {
-                    width: 85%;
+                    width: calc(100% - $width-hearth);
                 }
                 &::before {
                     /*
