@@ -75,7 +75,15 @@
         margin: 1em;
         padding: 1em 2em 1em 1em;
         border-radius: 20px;
+        display: grid;
+        grid-template-areas: "a a a" "b c d";
+        grid-template-columns: 3fr;
+        transition-duration: 1s;
+        h3 {
+            grid-area: a;
+        }
         p {
+            grid-area: b;
             font-size: 0.90em;
             display: inline-block;
             overflow: hidden;
@@ -84,8 +92,20 @@
             max-width: 90%;
         }
         span {
+            grid-area: c;
             float: right;
             font-weight: 900;
+        }
+        &::after {
+            grid-area: d;
+            padding-left: 3em;
+            content: 'toto';
+            width: 0;
+        }
+        &:hover::after {
+            display: block;
+            margin-right: 0;
+            width: 100%;
         }
     } 
 }
