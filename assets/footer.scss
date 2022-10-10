@@ -1,4 +1,10 @@
-footer {
+/*
+ * Fichier footer.scss
+ * ------------------------
+ * Fichier de style dédié au footer de toutes les pages
+ */
+ 
+ footer {
 	background-color: $bg-footer;
 	color: white;
 	padding-bottom: 20px;
@@ -11,7 +17,7 @@ footer {
 		padding: 20px;
 	}
 
-	.menu {
+	.footer {
 		display: flex;
 		padding: 0 0 0.25em 20px;
 		font-size: 1em;
