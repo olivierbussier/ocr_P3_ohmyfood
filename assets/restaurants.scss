@@ -56,30 +56,32 @@
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-
-                .none {
-                    display: none;
-                }
                 div {
                     width: 85%;
                 }
-                i {
-                    position: absolute;
-                    top: calc(50% - 1rem);
-                    right: 1rem;
-                    text-align: center;
-                    color: $primary-color;
-                    opacity: 1;
+                &::before {
+                    /*
+                     * Mixin heart (coeur contour uniquement) avec parametres
+                     *  - base opacity: 1  (visible)
+                     *  - font-weight: 400 (juste le contour)
+                     */
+                    @include heart(1, 400);
+                }
+                &::after {
+                    /*
+                     * Mixin heart (coeur plein) avec parametres
+                     *  - base opacity: 0  (invisible)
+                     *  - font-weight: 900 (coeur plein)
+                     */
+                    @include heart(0, 900);
                     transition-duration: 0.5s;
                 }
-                .fa-solid {
-                    color:transparent;
-                    opacity: 0;
-                    background-image: linear-gradient($primary-color, $secondary-color);
-                    background-clip: text;
-                    &:hover {
-                        opacity: 1;
-                    }
+                &:hover::after {
+                    /*
+                     * Sur le hover on fait apparaitre le coeur plein
+                     *  - opacity: 1 (visible)
+                     */
+                     opacity: 1;
                 }
             }
         }
