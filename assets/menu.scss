@@ -18,7 +18,7 @@
         @include font-logo;
         h2 {
             width: calc(100% - $width-hearth);
-            padding-bottom: 3rem;
+            padding: 2rem 0 2rem 1rem;
         }
         &::before {
             /*
@@ -59,15 +59,14 @@
             overflow: hidden;
             >h3 {
                 font-weight: 700;
-                padding: 0 0 0 0;
-                margin: 2rem;
+                margin: 1rem;
                 content: '@';
                 text-transform: uppercase;
-                padding: 1rem 0 1rem 0;
+                padding: 1rem 0 0.5rem 0;
                 font-weight: 300;
                 border-bottom: 3px $alternate-color solid;
                 border-width:thick;
-                width: 10%;
+                width: 12%;
             }
             .plat {
                 //*{ border:1px solid red; }
@@ -148,6 +147,12 @@
             } 
         }
     }
+}
+
+.commander {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0 4rem 0;
 }
 
 
