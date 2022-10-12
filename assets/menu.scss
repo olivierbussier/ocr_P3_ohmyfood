@@ -55,8 +55,17 @@
         margin-top:-2em;
         border-radius: 40px;
         background-color: #f6f6f6;
+        @for $i from 1 through 12 {
+            .section:nth-of-type(#{$i}) {
+                animation-delay: 200ms * $i;
+            }
+        }
         .section {
+            position: relative;
+            top: 5vh;
             overflow: hidden;
+            animation: shift-up 3s;
+            animation-fill-mode: forwards;
             >h3 {
                 font-weight: 700;
                 margin: 1rem;
@@ -67,6 +76,11 @@
                 border-bottom: 3px $alternate-color solid;
                 border-width:thick;
                 width: 12%;
+            }
+            @keyframes shift-up {
+                to{
+                    top:0
+                }
             }
             .plat {
                 //*{ border:1px solid red; }
