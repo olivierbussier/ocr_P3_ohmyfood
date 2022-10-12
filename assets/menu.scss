@@ -78,9 +78,9 @@
                 overflow: hidden;   
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                box-shadow: 3px 3px 5px 1px lightgrey;
+                box-shadow: 0 0 19px 0 lightgrey;
                 .description {
-                    padding: 0.5em 1em;
+                    padding: 1em;
                     //width: auto;
                     overflow: hidden;
                     white-space: nowrap;
@@ -111,24 +111,20 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    margin-right: -4rem;
-                    transition: margin-right 1s;
-                    width: 4rem;
+                    margin-right: -6rem;
+                    min-width: 6rem;
                     font-weight: 900;
                     background-color: $alternate-color;
+                    transition: all 1s;
                     i {
                         background-color: white;
                         color: $alternate-color;
                         border-radius: 50%;
                         padding: 0.3rem;
-                        transform: rotate(360deg);
                     }
                 }
-                &:hover {
-                    .check {
-                        margin-right: 0;
-                        transition: margin-right 1s transform 1s;
-                    }
+                &:hover .check {
+                    margin-right: 0;
                     @keyframes rot {
                         0% {
                             transform: rotate(0);
@@ -138,11 +134,8 @@
                         }
                     }
                     i {
-                        animation: rot 1s ease;
+                        animation: rot 1s ;
                     }
-                }
-                &:hover .description {
-                    //width: 45%;
                 }
             } 
         }

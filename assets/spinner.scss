@@ -11,6 +11,19 @@
 	}
 }
 
+// Classe bg-spinner pour l'apparition progressive après un délai de 3secondes
+.bg-spinner {
+	display: grid;
+	place-items: center;
+	position: fixed;
+	inset: 0;
+	background-color: white;
+	animation: appear 1s 3s ease-in;
+	animation-fill-mode: forwards;
+	z-index: 2;
+}
+
+// Keyframes pour l'animation en rotation du svg
 @keyframes dash {
 	0% {
 	  stroke-dasharray: 1, 150;
@@ -25,35 +38,18 @@
 	  stroke-dashoffset: -124;
 	}
 }
-  
-@keyframes rotate {
-	100% {
-	  transform: rotate(360deg);
-	}
-}
-  
-.bg-spinner {
-	display: grid;
-	place-items: center;
-	position: fixed;
-	inset: 0;
-	background-color: white;
-	animation: appear 1s 3s ease-in;
-	animation-fill-mode: forwards;
-	z-index: 2;
-}
+
+// Classe spinner, pour l'animation du svg
 .spinner {
 	background-color: white;
 	color: green;
+	width: 200px;
+	height: 200px;
 	z-index: 3;
-	animation: rotate 2s linear infinite;
-
-	width: 100px;
-	height: 100px;
 	& .path {
-		stroke: hsl(210, 70%, 75%);
+		stroke: $primary-color;
 		stroke-linecap: round;
-		animation: dash 1.5s ease-in-out infinite;
+		animation: dash 2s ease-in-out infinite;
 	  }
 }
 

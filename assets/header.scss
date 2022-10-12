@@ -6,24 +6,26 @@
  
  // Section du titre de la page
 header {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
+	position: relative;
 	box-shadow: 0 3px 3px darken($background-light,20%);
 	margin-bottom: 3px;
 	@include font-logo;
 	h1 {
-		font-size: 2em;
-		text-align: center;
-		margin: 00 3px 0;
-		padding: 1em;
-	}
-	i {
-		font: var(--fa-font-solid);
 		font-size: 2rem;
-		content: '\f060';
-		display: inline-block;
+		text-align: center;
+		margin: 0 3px 0;
+		padding: 2rem;
 	}
+}
+
+.arrow {
+	position: absolute;
+	top: calc(100% / 2 - 0.5em);
+	left: 20px;
+	font-size: 2rem;
+	float: left;
+	display: block;
+	margin: auto;
+	color: black;
 }
 

@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="./assets/normalize.css">
     <link rel="stylesheet" href="./build/style-page.css">
     <title>La palette du gout</title>
 </head>
-<body>
+<body class="preload">
 
     <div class="container">
 
-        <header class="has-arrow">
+        <header>
             
-            <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+            <a class="arrow" href="index.html">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            
             <h1>OhMyFood</h1>
 
         </header>
@@ -118,7 +122,6 @@
             </div>
 
     </section>
-
         <footer>
             <h2>ohmyfood</h2>
             <div class="footer gras"><i class="fa-solid fa-utensils"></i><h3>Proposer un restaurant</h3></div>
@@ -126,7 +129,11 @@
             <div class="footer">mentions légales</div>
             <div class="footer"><a href="mailto:adresse@mail.com">Contact</a></div>
         </footer>
-
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+            const a = document.querySelector("body").classList.remove('preload')
+        });
+    </script>
 </body>
 </html>

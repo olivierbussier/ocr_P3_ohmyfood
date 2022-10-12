@@ -7,7 +7,6 @@
  .restaurants {
     background-color: $background-light;
     margin-bottom: 1em;
-    padding: 0 1em;
     .menus {
         a{
             text-decoration: inherit;
@@ -20,7 +19,7 @@
         }
         .card {
             position: relative;
-            margin: 1rem 0;
+            margin: 1rem;
             border-radius: 20px;
             border:none;
             background-color: #fff;
