@@ -1,0 +1,91 @@
+/*
+ * Fichier restaurants.scss
+ * ------------------------
+ * Fichier de style dédié aux cartes de restaurant
+ */
+ 
+ .restaurants {
+    background-color: $background-light;
+    margin-bottom: 1em;
+ }
+
+.menus {
+    a{
+        text-decoration: inherit;
+        color:inherit;
+    }
+    display: grid;
+    grid-template-columns: 1fr;
+    @media  (min-width: $bp-desktop) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.card {
+    position: relative;
+    margin: 1rem;
+    border-radius: 20px;
+    border:none;
+    background-color: #fff;
+    box-shadow: 0 0 10px lightgray;
+    img {
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+        height: 200px;
+        object-fit: cover;
+    }
+    h2 {
+        padding: 1rem 0 0.25rem 1rem;
+        margin: 0;
+        font-size: 1.25rem;
+    }
+    p {
+        padding: 0 0 1rem 1rem;
+    }
+    &.new::after {
+        content: "Nouveau";
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        padding: 6px 10px;
+        background-color:$alternate-color;
+        color:darken($alternate-color, 50%);
+        font-size: .9em;
+        font-weight: 700;
+        border-radius: 3px;
+    }
+}
+
+.card-body {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    div {
+        width: calc(100% - $width-hearth);
+    }
+    &::before {
+        /*
+            * Mixin heart (coeur contour uniquement) avec parametres
+            *  - base opacity: 1  (visible)
+            *  - font-weight: 400 (juste le contour)
+            */
+        @include heart(1, 400);
+    }
+    &::after {
+        /*
+            * Mixin heart (coeur plein) avec parametres
+            *  - base opacity: 0  (invisible)
+            *  - font-weight: 900 (coeur plein)
+            */
+        @include heart(0, 900);
+        transition-duration: 0.5s;
+    }
+    &:hover::after {
+        /*
+            * Sur le hover on fait apparaitre le coeur plein
+            *  - opacity: 1 (visible)
+            */
+            opacity: 1;
+    }
+}

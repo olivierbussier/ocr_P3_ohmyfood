@@ -27,8 +27,8 @@ Encore
      * Each entry will result in one JavaScript file (e.g. guc_base.js)
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
-    .addEntry('style-index'   , './assets/style-index.scss')
-    .addEntry('style-page'    , './assets/style-page.scss')
+    .addEntry('main-index'   , './sass/main-index.scss')
+    .addEntry('main-page'    , './sass/main-page.scss')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     //.splitEntryChunks()

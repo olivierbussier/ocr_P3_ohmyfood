@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// Couleurs imposées par la charte graphique
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$alternate-color: #99E2D0;
+
+// Gris utilisé sur les différents background
+$background-light: #f5f5f5;
+$background-localisation: darken($background-light,8%);
+$bg-footer: #3e3e3e;
+
+$bp-desktop: 860px;
+$width-hearth: 15%;
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;

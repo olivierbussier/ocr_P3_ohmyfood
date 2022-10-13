@@ -1,10 +1,7 @@
-/*
- * Fichier header.scss
- * ------------------------------------
- * Styles relatifs a la partie header de la page
- */
- 
- // Section du titre de la page
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
 header {
 	position: relative;
 	box-shadow: 0 3px 3px darken($background-light,20%);
@@ -28,4 +25,3 @@ header {
 	margin: auto;
 	color: black;
 }
-

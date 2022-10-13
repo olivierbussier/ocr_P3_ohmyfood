@@ -1,0 +1,37 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+// Mixins pour les polices de caracteres
+@mixin font-logo {
+	font-family: 'Shrikhand', 'cursive';
+}
+
+@mixin font-body {
+	font-family: 'roboto' , 'sans-serif';
+}
+
+// Mixin pour le dégradé utilisé à plusieurs endroits
+@mixin box-gradient {
+  background-image: linear-gradient($secondary-color,$primary-color);
+}
+
+@mixin animation-duration {
+	transition-duration: 250ms;
+}
+
+@mixin button-animation {
+	transform: scale(1.02);
+	opacity: 0.9;
+}
+@mixin heart($base-opacity: 1, $font-weight: 400) {
+	font-family: "Font Awesome 5 Free"; 
+	font-weight: $font-weight;
+	content: "\f004";
+	position: absolute;
+	top: calc(100% / 2 - 0.5rem);
+	right: calc($width-hearth / 2 - 0.5rem);
+	text-align: center;
+	color: $primary-color;
+	opacity: $base-opacity;
+}

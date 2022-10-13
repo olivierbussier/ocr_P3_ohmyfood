@@ -4,7 +4,13 @@
  * Fichier de style dédié a la rubrique d'explication du fonctionnement du site
  */
  
- .fonctionnement {
+ 
+// Classes de couleurs
+.fg-primary {
+	color: $primary-color!important;
+}
+
+.fonctionnement {
 	margin-bottom: 30px;
     counter-reset: counter-etape;
     font-size: 1em;

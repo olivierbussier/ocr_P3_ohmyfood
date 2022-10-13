@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+// Extern url's
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+// 2. Vendors
+@import
+  'vendors/normalize';
+
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
+
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer',
+  'layout/title';
+
+// 5. Components
+@import
+  'components/button';
+
+// 6. Page-specific styles
+@import
+'pages/page-loader',
+'pages/banniere',
+'pages/fonctionnement',
+'pages/restaurants',
+'pages/localisation';
+
+  

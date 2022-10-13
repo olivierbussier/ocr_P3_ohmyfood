@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn {
+    $size: 1rem;
+	font-size: $size;
+	border:none;
+	color: white;
+	border-radius: $size * 2;
+    box-shadow: 2px 1px 5px grey;
+	padding: $size $size * 3;
+    @include box-gradient;
+    @include animation-duration;
+    &:hover {
+        @include button-animation;
+    }
+}
