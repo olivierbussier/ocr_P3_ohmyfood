@@ -24,13 +24,15 @@
 	transform: scale(1.02);
 	opacity: 0.9;
 }
-@mixin heart($base-opacity: 1, $font-weight: 400) {
-	font-family: "Font Awesome 5 Free"; 
+@mixin heart($base-opacity: 1, $font-weight: 400, $position: true) {
+	font-family: "Font Awesome 5 Free";
 	font-weight: $font-weight;
 	content: "\f004";
 	position: absolute;
-	top: calc(100% / 2 - 0.5rem);
-	right: calc($width-hearth / 2 - 0.5rem);
+	@if $position == true {
+		top: calc(100% / 2 - 0.5rem);
+		right: calc($width-hearth / 2 - 0.5rem);
+	}
 	text-align: center;
 	color: $primary-color;
 	opacity: $base-opacity;

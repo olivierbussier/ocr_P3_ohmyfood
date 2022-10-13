@@ -32,7 +32,7 @@
             *  - base opacity: 1  (visible)
             *  - font-weight: 400 (juste le contour)
             */
-        @include heart(1, 400);
+        @include heart($base-opacity: 1, $font-weight: 400, $absolute: true);
     }
     &::after {
         /*
@@ -40,7 +40,7 @@
             *  - base opacity: 0  (invisible)
             *  - font-weight: 900 (coeur plein)
             */
-        @include heart(0, 900);
+        @include heart($base-opacity: 0, $font-weight: 900, $absolute: true);
         transition-duration: 0.5s;
     }
     &:hover::after {

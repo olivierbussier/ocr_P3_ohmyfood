@@ -24,19 +24,17 @@
 // 4. Layout-related sections
 @import
   'layout/header',
-  'layout/footer',
-  'layout/title';
-
+  'layout/footer';
+  
 // 5. Components
 @import
   'components/button';
 
 // 6. Page-specific styles
 @import
+'pages/title',
 'pages/page-loader',
 'pages/banniere',
 'pages/fonctionnement',
 'pages/restaurants',
 'pages/localisation';
-
-  
