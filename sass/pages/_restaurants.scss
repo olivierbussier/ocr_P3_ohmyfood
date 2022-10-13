@@ -45,7 +45,7 @@
     p {
         padding: 0 0 1rem 1rem;
     }
-    &.new::after {
+    &.new::before {
         content: "Nouveau";
         position: absolute;
         right: 20px;

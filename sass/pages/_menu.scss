@@ -81,7 +81,7 @@
             font-weight: 300;
             border-bottom: 3px $alternate-color solid;
             border-width:thick;
-            width: 12%;
+            width: 3rem;    // Nombre de caracteres soulignés
         }
         @keyframes shift-up {
             to{
